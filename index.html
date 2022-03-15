@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Liste de séries en VueJs</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--  <nav>
+        <div><router-link to="/">Logo</router-link></div>
+        <ul>
+          <li><router-link to="/movies">Films</router-link></li>
+          <li><router-link to="/series">Séries</router-link></li>
+          <li><button>|||</button></li>
+        </ul>
+      </nav> -->
+      <router-view></router-view>
+    </div>
+
+    <script type="text/x-template" id="home">
+
+              <div class="home-container">
+                  <div>
+                <input v-model='searchbar'id="search" type="search" placeholder='Rechercher une série'>
+                <span v-if='searchbar && filteredByName.length >= 1'>
+               {{filteredByName.length}} resultat<span v-if='fiteredByName > 1'>s</span>
+            </span>
+
+      </div>
+
+                  <div class="card-container">
+                      <div v-for='tvShow in filteredByName' class="card" >
+                          <div class="img-container" key='tvShow.id'>
+                              <img  v-bind:src='tvShow.image.medium' class="poster"alt="">
+                          </div>
+                          <div class="card-text">
+                              <p><span name='name'>Titre</span> : {{tvShow.name}}</p>
+                              <p><span >Status</span>:
+                                <p><span class="status" name='status'>{{tvShow.status}} </span></p>
+                              <p><span>Type</span>: {{tvShow.type}}</p>
+                              <p><span>Genre</span>: {{tvShow.genres}}</p>
+                              <p class="year"><span>Année</span>: {{tvShow.premiered}}</p>
+                              <p class="summary"><span>Synopsis</span>: {{tvShow.summary}}</p>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    <script src="./vue.js"></script>
+  </body>
+</html>

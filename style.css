@@ -1,0 +1,53 @@
+.html {
+  font-family: "Calibri";
+}
+body {
+  background-color: grey;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 337px;
+  height: auto;
+  margin: 0.5em 0.5em;
+  border: solid black 1px;
+  border-radius: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+.img-container {
+  width: 337px;
+  height: 500px;
+}
+.card-text {
+  height: auto;
+  width: 90%;
+  margin: auto;
+  font-family: "Calibri", sans-serif;
+  font-weight: 400;
+}
+.poster {
+  width: 100%;
+  height: auto;
+}
+/* .poster:hover {
+  transform: scale(0);
+  transition: 3s;
+} */
+.year {
+  margin: auto;
+}
+span {
+  font-weight: bold;
+}
+.status {
+  cursor: pointer;
+}
