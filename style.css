@@ -2,13 +2,38 @@
   font-family: "Calibri";
 }
 body {
+  margin: 0px;
   background-color: grey;
+}
+.nav {
+  display: flex;
+  height: 60px;
+  line-height: 80px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.nav > span {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 2em;
+}
+.searchbar {
+  border: none;
+  border-radius: 2px;
+  height: 20px;
+}
+.searchbar:focus {
+  border: solid 1px rgb(42, 95, 211);
+  border-radius: 2px;
+  height: 20px;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 2em;
 }
 .card {
   width: 337px;

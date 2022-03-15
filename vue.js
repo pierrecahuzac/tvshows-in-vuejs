@@ -12635,13 +12635,12 @@ const Home = {
       });
     },
   },
-  /*   methods: {
+  methods: {
     /*   getFilteredByStatus(ended) {
       return this.tvShows.filter((tvShow) => {
         return tvShow.type.toLowerCase().includes(this.tvShow.status);
-      });
-    },
-  }, */
+      });*/
+  },
 };
 
 const Movies = {
