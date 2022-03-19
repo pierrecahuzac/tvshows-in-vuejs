@@ -17,6 +17,28 @@ body {
   height: 60px;
   line-height: 60px;
   padding: 0 2em;
+  font-family: Calibri;
+  font-size: 1.2em;
+}
+.tvshows-length {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-family: Calibri;
+  font-size: 1.2em;
+}
+.query {
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
+  padding: 1em;
+  font-family: Calibri;
+}
+.tvshows-length {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
 }
 .searchbar {
   border: none;
@@ -33,7 +55,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2em;
+  margin: 1em;
 }
 .card {
   width: 337px;
@@ -47,17 +69,19 @@ body {
 .card:hover {
   transform: scale(1.02);
   transition: 0.3s;
+  box-shadow: 5px 5px 15px 5px #292929;
 }
 .img-container {
-  width: 337px;
-  height: 500px;
+  width: 100%;
+  height: auto;
 }
 .card-text {
-  height: auto;
+  height: 100%;
   width: 90%;
   margin: auto;
   font-family: "Calibri", sans-serif;
   font-weight: 400;
+  padding: 20px 20px;
 }
 .poster {
   width: 100%;
@@ -75,4 +99,26 @@ span {
 }
 .status {
   cursor: pointer;
+  font-weight: 400;
+}
+
+/* @media screen and (max-width: 400px) {
+  .query {
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    padding: 1em;
+    font-family: Calibri;
+  }
+} */
+/* animation */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }

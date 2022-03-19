@@ -12619,23 +12619,31 @@ const Home = {
   data: () => {
     return {
       tvShows,
-      searchbar: "",
+      query: "",
       totalOfShow: 0,
+      tvGenres: [],
     };
   },
   computed: {
     /* getDate() {
-      const date = new Date();
+      const date = new Date()
       const dateToString = date.toLocaleDateString();
       return dateToString;
     }, */
     filteredByName() {
       return this.tvShows.filter((tvShow) => {
-        return tvShow.name.toLowerCase().includes(this.searchbar.toLowerCase());
+        return tvShow.name.toLowerCase().includes(this.query.toLowerCase());
       });
     },
   },
   methods: {
+    filterByGenre() {
+      tvShows.map((elem) => {
+        let tvGenres = [];
+        tvGenres.push(elem.genres);
+        console.log(tvGenres);
+      });
+    },
     /*   getFilteredByStatus(ended) {
       return this.tvShows.filter((tvShow) => {
         return tvShow.type.toLowerCase().includes(this.tvShow.status);
